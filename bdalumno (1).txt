@@ -1,0 +1,41 @@
+create database dbsistemas
+create table alumnos
+(codigo int primary key identity(1,1) not null,
+ nombre varchar(25),
+ apellidos varchar(25),
+ distrito varchar(25),
+ telefono varchar(25),
+ direccion varchar(60))
+
+ CREATE PROCEDURE  usp_alumnos_Listar 
+AS
+SELECT codigo, nombre, apellidos, distrito,telefono,direccion
+FROM     alumnos
+
+CREATE PROCEDURE usp_alumnos_Adicionar 
+	@nombre varchar(25),
+	@apellidos VARCHAR(25),
+	@distrito varchar(25),
+	@telefono varchar(25),
+	@direccion varchar(60)
+	
+AS
+INSERT INTO alumnos(nombre,apellidos,distrito,telefono,direccion)
+VALUES (@nombre,@apellidos,@distrito,@telefono,@direccion)
+
+CREATE PROCEDURE usp_cliente_eliminar
+@codigo int	
+AS
+DELETE FROM alumnos where codigo=@codigo
+
+CREATE PROCEDURE usp_alumnos_actualizar 
+@codigo int, 
+@nombre varchar(25),
+@apellidos VARCHAR(25),
+@distrito varchar(25),
+@telefono varchar(25),
+@direccion varchar(60)
+AS
+UPDATE alumnos SET nombre=@nombre,apellidos=@apellidos,distrito=@direccion,telefono=@telefono, direccion=@direccion
+where codigo=@codigo
+

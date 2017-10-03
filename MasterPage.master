@@ -1,0 +1,200 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 413px;
+            height: 384px;
+            border: 2px solid #0033CC;
+            background-color: #FF9933;
+        }
+        .auto-style2 {
+            text-align: center;
+        }
+        .auto-style3 {
+            width: 100px;
+            height: 87px;
+            margin-left: 37px;
+        }
+        .auto-style4 {
+            width: 118px;
+            height: 89px;
+            text-align: center;
+            margin-left: 48px;
+        }
+        .auto-style5 {
+            width: 191px;
+        }
+        .auto-style6 {
+            width: 102px;
+            height: 105px;
+            text-align: center;
+            margin-left: 27px;
+            margin-right: 48px;
+            margin-top: 29px;
+        }
+        .auto-style7 {
+            width: 346px;
+        }
+        .auto-style8 {
+            width: 508px;
+        }
+        .auto-style13 {
+            height: 277px;
+        }
+        .auto-style14 {
+            height: 316px;
+            width: 548px;
+            border: 2px solid #000000;
+            background-color: #00CCFF;
+        }
+        .auto-style15 {
+            text-align: center;
+            width: 102px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+            <table align="center" class="auto-style1">
+                <tr>
+                    <td class="auto-style15">
+                        <img class="auto-style6" src="file:///C:/Users/pc/Desktop/imagi/3.jpg" /></td>
+                    <td class="auto-style5">
+                        <img alt="" class="auto-style3" src="file:///C:/Users/pc/Desktop/imagi/1.jpg" /></td>
+                    <td class="auto-style7">
+                        <img class="auto-style4" src="file:///C:/Users/pc/Desktop/imagi/2.png" /></td>
+                    <td class="auto-style8">
+                        <img class="auto-style6" src="file:///C:/Users/pc/Desktop/imagi/3.jpg" /></td>
+                </tr>
+                <tr>
+                    <td class="auto-style2" colspan="4">
+                        <asp:Label ID="Label1" runat="server" Text="INICIO "></asp:Label>
+                        <asp:Label ID="Label2" runat="server" Text="VISION  "></asp:Label>
+                        <asp:Label ID="Label3" runat="server" Text="MISION  "></asp:Label>
+                        <asp:Label ID="Label4" runat="server" Text="CLIENTES  "></asp:Label>
+                        <asp:Label ID="Label5" runat="server" Text="PRODUCTOS  "></asp:Label>
+                        <asp:Label ID="Label6" runat="server" Text="PROVEEDORES  "></asp:Label>
+                        <asp:Label ID="Label15" runat="server" Text="EMPLEADOS"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style15" rowspan="2">
+                        <asp:TreeView ID="TreeView1" runat="server" ImageSet="Contacts" NodeIndent="10">
+                            <HoverNodeStyle Font-Underline="False" />
+                            <Nodes>
+                                <asp:TreeNode Text="Inicio" Value="usuario"></asp:TreeNode>
+                                <asp:TreeNode Text="Mision" Value="New Node"></asp:TreeNode>
+                                <asp:TreeNode Text="Vision" Value="New Node"></asp:TreeNode>
+                                <asp:TreeNode Text="Clientes" Value="New Node"></asp:TreeNode>
+                                <asp:TreeNode Text="Proveedores" Value="New Node"></asp:TreeNode>
+                                <asp:TreeNode Text="Productos" Value="New Node"></asp:TreeNode>
+                                <asp:TreeNode Text="Empleados" Value="New Node"></asp:TreeNode>
+                                <asp:TreeNode Text="Contactos" Value="New Node"></asp:TreeNode>
+                            </Nodes>
+                            <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" HorizontalPadding="5px" NodeSpacing="0px" VerticalPadding="0px" />
+                            <ParentNodeStyle Font-Bold="True" ForeColor="#5555DD" />
+                            <SelectedNodeStyle Font-Underline="True" HorizontalPadding="0px" VerticalPadding="0px" />
+                        </asp:TreeView>
+                    </td>
+                    <td class="auto-style13" colspan="3">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                            <table align="center" aria-orientation="vertical" class="auto-style14">
+                                <tr>
+                                    <td colspan="2" style="text-align: center">
+                                        <asp:Label ID="Label7" runat="server" style="text-align: center" Text="Empleados"></asp:Label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <asp:Label ID="Label8" runat="server" Text="CODIGO"></asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="Txtcodigo" runat="server" style="text-align: center" Width="229px"></asp:TextBox>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <asp:Label ID="Label9" runat="server" Text="NOMBRE"></asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="Txtnombre" runat="server" style="text-align: center" Width="229px"></asp:TextBox>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <asp:Label ID="Label10" runat="server" Text="APELLIDO"></asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="Txtapellido" runat="server" style="text-align: center" Width="229px"></asp:TextBox>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <asp:Label ID="Label11" runat="server" Text="CARGO"></asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="Txtcargo" runat="server" style="text-align: center" Width="229px"></asp:TextBox>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <asp:Label ID="Label12" runat="server" Text="FECHA DE CONTRATACION"></asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="Txtfecha" runat="server" style="text-align: center" Width="229px"></asp:TextBox>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <asp:Label ID="Label13" runat="server" Text="DIRECCION"></asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="Txtdireccion" runat="server" style="text-align: center" Width="229px"></asp:TextBox>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <asp:Label ID="Label14" runat="server" Text="TELEFONO"></asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="Txttelefono" runat="server" style="text-align: center" Width="229px"></asp:TextBox>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="text-align: center">
+                                        <asp:Button ID="Btnlimpiar" runat="server" Text="Limpiar" Width="73px" />
+                                        <asp:Button ID="Btnagregar" runat="server" Text="Agregar" />
+                                        <asp:Button ID="Btneliminar" runat="server" Text="Eliminar" />
+                                        <asp:Button ID="Btnmodificar" runat="server" Text="Modificar" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                            </table>
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style5">&nbsp;</td>
+                    <td class="auto-style7">&nbsp;</td>
+                    <td class="auto-style8">&nbsp;</td>
+                </tr>
+            </table>
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
